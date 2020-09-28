@@ -1,0 +1,19 @@
+Refer below lik for Stanford Video Series
+https://www.youtube.com/watch?v=jbtqIBpUG7g&list=PLeRZosh8KDoFjG9oECXBNlfDEBCJ137g2&index=1&ab_channel=Stanford
+
+Day 1:
+Main piece of Info:
+struct ContentView: View {
+    var body: some View {
+		HStack {
+			ForEach(0..<4) { index in
+				ZStack {
+					RoundedRectangle(cornerRadius: 20).fill(Color.orange)
+					Text("😀")
+				}
+			}
+		}
+		.padding(10)
+		.font(Font.largeTitle)
+    }
+}
