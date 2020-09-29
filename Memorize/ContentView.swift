@@ -9,25 +9,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-		HStack {
-			ForEach(0..<4) { index in
-				ZStack {
-					RoundedRectangle(cornerRadius: 20).fill(Color.orange)
-					Text("😀")
+	var body: some View {
+		GeometryReader { geometry in
+			VStack {
+				ForEach(0..<6) { index in
+					HStack {
+						ForEach(0..<4) { index in
+							ZStack {
+								RoundedRectangle(cornerRadius: 20).fill(Color.orange)
+								Text("😀😀")
+							}
+						}
+					}
+					.padding(10)
+					.font(Font.largeTitle)
 				}
-				
 			}
-			
 		}
-		.padding(10)
-		.font(Font.largeTitle)
-		
-    }
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
